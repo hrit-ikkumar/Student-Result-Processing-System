@@ -6,6 +6,10 @@ const markSchema = new Schema({
         type: Number,
         required: true
     },
+    semesterNumber: {
+        type: Number,
+        required: true
+    },
     courseCode: {
         type:String,
         required: true
@@ -29,7 +33,9 @@ const markSchema = new Schema({
         type: Boolean,
         required: true
     },
-
+    totalCredits: {
+        type: Number
+    }
 }, {
     timestamps: true
 });

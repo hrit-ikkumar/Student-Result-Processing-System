@@ -5,6 +5,7 @@ var authenticate = require('../authenticate');
 const cors = require('./cors');
 
 const Marks = require('../models/markSchema');
+const Courses = require('../models/courseSchema');
 
 const markRouter = express.Router();
 

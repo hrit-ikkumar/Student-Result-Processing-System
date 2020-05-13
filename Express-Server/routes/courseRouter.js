@@ -23,7 +23,6 @@ courseRouter.route('/')
 })
 .post(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
     if (req.body != null) {
-        req.body.author = req.user._id;
         Courses.create(req.body)
         .then((Course) => {
             res.statusCode = 200;
@@ -37,7 +36,6 @@ courseRouter.route('/')
         err.status = 404;
         return next(err);
     }
-
 })
 .put(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
     res.statusCode = 403;

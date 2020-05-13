@@ -22,8 +22,9 @@ var config = require('./config');
 
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);
-
+var database;
 connect.then((db) => {
+  database = db;
     console.log("Connected correctly to server");
 }, (err) => { console.log(err); });
 
