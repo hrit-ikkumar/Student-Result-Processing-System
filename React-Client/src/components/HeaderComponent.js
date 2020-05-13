@@ -48,8 +48,7 @@ class Header extends Component {
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/">
-                            <img src="assets/images/logo.png" height="30" width="41"
-                                alt="Ristorante Con Fusion" />
+                            <h3>Open Results &nbsp;</h3>
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
@@ -59,23 +58,13 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/aboutus">
-                                        <span className="fa fa-info fa-lg"></span> About Us
+                                    <NavLink className="nav-link" to="/marks">
+                                        <span className="fa fa-book fa-lg"></span> Marks
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/menu">
-                                        <span className="fa fa-list fa-lg"></span> Menu
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/favorites">
-                                        <span className="fa fa-heart fa-lg"></span> My Favorites
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                        <span className="fa fa-address-card fa-lg"></span> Contact Us
+                                    <NavLink className="nav-link" to="/results">
+                                        <span className="fa fa-info fa-lg"></span> Results
                                     </NavLink>
                                 </NavItem>
                             </Nav>
@@ -107,16 +96,29 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-                <Jumbotron>
-                    <div className="container">
-                        <div className="row row-header">
-                            <div className="col-12 col-sm-6">
-                                <h1>Ristorante Con Fusion</h1>
-                                <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                <div className="col-12">
+                    <Jumbotron>
+                        <div className="container mr-auto">
+                            <div className="row row-header">
+                                <div className="col-6 power1">
+                                    <h1 className="power2"><b>Student Result</b><br/> Processing System</h1>
+                                    <p> Our results are highly reliable in the market. You can trust us and computer your result. We are wishing you a luck!</p>
+                                    <h4><b>Who can use it?</b></h4>
+                                    <ul>
+                                        <li>College Students <ul><li>Engineering Students</li><li>Medical Students</li></ul></li>
+                                    </ul>
+                                    <h4><b>Who can not use it?</b></h4>
+                                    <ul>
+                                        <li>School Students <ul><li>High School Students</li><li>Elementry Students</li></ul></li>
+                                    </ul>
+                                </div>
+                                <div className="col-6">
+                                    <img src="https://png.pngtree.com/png-vector/20191022/ourlarge/pngtree-students-successfully-passed-exam-good-result-vector-isolated-illustration-png-image_1846499.jpg" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </Jumbotron>
+                    </Jumbotron>
+                </div>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
@@ -136,6 +138,9 @@ class Header extends Component {
                                     <Input type="checkbox" name="remember"
                                     innerRef={(input) => this.remember = input}  />
                                     Remember me
+                                </Label>
+                                <Label>
+                                    <p className="col-11">If, You don't have credentials. You can contact to Hritik (+91 8209062638)</p>
                                 </Label>
                             </FormGroup>
                             <Button type="submit" value="submit" color="primary">Login</Button>
